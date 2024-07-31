@@ -3,11 +3,10 @@
  * @Author: didadida262
  * @Date: 2024-03-19 12:13:47
  * @LastEditors: didadida262
- * @LastEditTime: 2024-07-31 18:10:09
+ * @LastEditTime: 2024-07-31 18:29:11
  */
-import { Button } from 'antd';
 import paper from 'paper'
-import React, { useRef, useEffect} from 'react'
+import  {  useEffect} from 'react'
 import { BsCursor } from "react-icons/bs";
 
 import { ButtonCommon, EButtonType } from '@/components/ButtonCommon';

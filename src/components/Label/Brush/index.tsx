@@ -3,11 +3,10 @@
  * @Author: didadida262
  * @Date: 2024-03-21 02:14:12
  * @LastEditors: didadida262
- * @LastEditTime: 2024-07-31 18:10:21
+ * @LastEditTime: 2024-07-31 18:33:21
  */
-import { Button } from 'antd';
 import paper from 'paper';
-import React, { useRef, useEffect } from 'react';
+import {  useEffect } from 'react';
 import { BsBrush } from 'react-icons/bs';
 
 import { ButtonCommon, EButtonType } from '@/components/ButtonCommon';
@@ -20,9 +19,7 @@ import './index.scss';
 const brushComponent = (props: any) => {
   const { activeTool, onClick } = props;
   const name = 'brush';
-  let initPoint = new paper.Point(0, 0);
   let circle = null as any;
-  let path = null as any;
   let tool = null as any;
 
   const initTool = () => {
@@ -33,11 +30,11 @@ const brushComponent = (props: any) => {
       radius: 10,
       strokeColor: 'red',
     });
-    path = new paper.CompoundPath({});
+    // path = new paper.CompoundPath({});
     tool.onMouseDown = (e: any) => {
       console.log('down', e.point);
 
-      initPoint = e.point;
+      // initPoint = e.point;
     };
     tool.onMouseDrag = (e: any) => {
       new paper.Path.Circle({

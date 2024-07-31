@@ -226,7 +226,7 @@ export const getViewBorderSize = (currentProject: paper.Project) => {
 // }
 
 export const showPoint = (point: any, color: any) => {
-  const p = new paper.Path.Circle({
+  new paper.Path.Circle({
     center: point,
     radius: 8,
     fillColor: color,

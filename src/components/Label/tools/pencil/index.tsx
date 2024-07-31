@@ -1,10 +1,15 @@
+/*
+ * @Description: 
+ * @Author: didadida262
+ * @Date: 2024-07-31 18:03:52
+ * @LastEditors: didadida262
+ * @LastEditTime: 2024-07-31 18:27:58
+ */
+
+import { Button } from 'antd';
+import paper from 'paper'
 
 import './index.scss'
-import { Button } from 'antd';
-import { useState } from 'react';
-// import pencil from "@/assets/icons/pencil.svg"
-import paper from 'paper'
-import React from 'react';
 
 interface IToolItemProps {
   toolItem: any,
@@ -13,20 +18,19 @@ interface IToolItemProps {
 
 const PencilComponent = (props: IToolItemProps) => {
   const { toolItem, handleClickTool } = props
-  const [pencil, setpencil] = useState(null)
   const createPencile = new paper.Tool()
-  const onMouseDown = (e) => {
+  const onMouseDown = (e:any) => {
     console.log('pencile>>>>down', e)
     
   }
-  const onMouseDrag = (e) => {
+  const onMouseDrag = (e:any) => {
     console.log('pencil--drag')
     
   }
-  const onMouseMove = (e) => {
+  const onMouseMove = (e:any) => {
     
   }
-  const onMouseUp = (e) => {
+  const onMouseUp = (e:any) => {
     
   }
   createPencile.onMouseDown = onMouseDown

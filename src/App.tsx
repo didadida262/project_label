@@ -3,16 +3,13 @@
  * @Author: didadida262
  * @Date: 2024-07-25 01:16:22
  * @LastEditors: didadida262
- * @LastEditTime: 2024-07-31 18:04:29
+ * @LastEditTime: 2024-07-31 18:32:36
  */
-import { useTranslation, switchLanguage } from '@/i18n';
-import ButtonTheme from '@/components/Theme/ButtonTheme'
+// import { useTranslation } from '@/i18n';
 import LabelComponent from '@/components/Label'
 
-import { ButtonCommon, EButtonType} from './components/ButtonCommon';
-
 function App() {
-  const { t } = useTranslation();
+  // const { t } = useTranslation();
 
   return (
     <div className="flex h-screen w-full items-center justify-center text-green-500 bg-bgPrimaryColor">

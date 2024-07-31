@@ -6,8 +6,7 @@
  * @LastEditTime: 2024-07-31 18:22:31
  */
 import paper from 'paper';
-import React from 'react';
-import { useState, useEffect, useRef } from 'react';
+import {  useEffect, useRef } from 'react';
 
 import { showPoint } from '@/utils/paperjsWeapon';
 
@@ -16,17 +15,13 @@ import imgurl from '../../../assets/只狼.jpeg';
 const DrawComponent = (props:any) => {
   const { activeTool } = props;
   const canvasRef = useRef(null) as any;
-  const initPoint = useRef(new paper.Point(0, 0));
+  // const initPoint = useRef(new paper.Point(0, 0));
 
-  const onMouseDown = (e:any) => {
-    initPoint.current = e.point;
-  };
-  const onMouseDrag = (e:any) => {
-    const delta = initPoint.current.subtract(e.point);
-    const newCenter = paper.project.view.center.add(delta);
-    const view: paper.View = paper.project.view;
-    paper.project.view.center = newCenter;
-  };
+  // const onMouseDrag = (e:any) => {
+  //   const delta = initPoint.current.subtract(e.point);
+  //   const newCenter = paper.project.view.center.add(delta);
+  //   paper.project.view.center = newCenter;
+  // };
   const setCursorPointer = () => {
     switch (activeTool) {
       case 'pointer':

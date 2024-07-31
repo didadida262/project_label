@@ -1,11 +1,18 @@
 /*
+ * @Description: 
+ * @Author: didadida262
+ * @Date: 2024-07-31 18:03:52
+ * @LastEditors: didadida262
+ * @LastEditTime: 2024-07-31 18:27:04
+ */
+/*
  * @lastTime: 2021-03-05 15:29:11
  * @Description: 同步hooks
  */
 
 import { useEffect, useState, useCallback } from 'react'
 
-const useSyncCallback = callback => {
+const useSyncCallback = (callback: { (): void; (): any }) => {
     const [proxyState, setProxyState] = useState({ current: false })
 
     const Func = useCallback(() => {

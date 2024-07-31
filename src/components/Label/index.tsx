@@ -3,11 +3,11 @@
  * @Author: didadida262
  * @Date: 2024-03-14 00:32:06
  * @LastEditors: didadida262
- * @LastEditTime: 2024-07-31 18:18:41
+ * @LastEditTime: 2024-07-31 18:30:07
  */
 import { message } from 'antd';
 import paper from 'paper';
-import React, { useEffect, useState } from 'react';
+import  { useEffect, useState } from 'react';
 
 import { ButtonCommon, EButtonType } from '@/components/ButtonCommon';
 import pattern from '@/styles/pattern';
@@ -24,7 +24,6 @@ const LabelComponent = () => {
   const [activeTool, setactiveTool] = useState('pencil');
   const [categories, setcategories] = useState([]) as any;
   const [currentPath, setcurrentPath] = useState(null) as any;
-
   const handleClickTool = (tool:any) => {
     setactiveTool(tool);
     message.success(`激活${tool}`);

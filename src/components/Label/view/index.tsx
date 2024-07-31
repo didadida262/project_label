@@ -1,9 +1,17 @@
-import { useEffect, useRef, useState } from 'react'
-import useSyncCallback from './test'
-import './index.scss'
+/*
+ * @Description: 
+ * @Author: didadida262
+ * @Date: 2024-07-31 18:03:52
+ * @LastEditors: didadida262
+ * @LastEditTime: 2024-07-31 18:27:20
+ */
 import paper from 'paper'
+import { useEffect, useRef, useState } from 'react'
+
 import imgUrl from '../../../assets/test.webp'
-import React from 'react'
+import useSyncCallback from './test'
+
+import './index.scss'
 
 const ViewComponent = () => {
   const [initPoint, setinitPoint] = useState({}) as any
@@ -22,7 +30,7 @@ const ViewComponent = () => {
       raster.fitBounds(paper.view.bounds, true)
     }
   }
-  const onMouseDown = (e) => {
+  const onMouseDown = (e: any) => {
     console.log('tool--down')
     setinitPoint(e.point)
   }
@@ -34,10 +42,10 @@ const ViewComponent = () => {
       pro.view.setCenter(newCenter)
     })
   })
-  const onMouseMove = (e) => {
+  const onMouseMove = (e: any) => {
     
   }
-  const onMouseUp = (e) => {
+  const onMouseUp = (e: any) => {
     
   }
   // 初始化画布，并确认相关参数初始值
@@ -47,7 +55,7 @@ const ViewComponent = () => {
     project.name = 'test'
     project.view.setCenter(0, 0)
     project.view.onMouseDown = onMouseDown
-    project.view.onMouseDrag = (e) => {
+    project.view.onMouseDrag = (e: any) => {
       setcurPoint(e.point)
       onMouseDrag()
     }

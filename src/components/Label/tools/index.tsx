@@ -1,10 +1,16 @@
+/*
+ * @Description: 
+ * @Author: didadida262
+ * @Date: 2024-07-31 18:03:52
+ * @LastEditors: didadida262
+ * @LastEditTime: 2024-07-31 18:28:42
+ */
+
+// import pencil from "@/assets/icons/pencil.svg"
+
+import PencilComponent from './pencil';
 
 import './index.scss'
-import { Button } from 'antd';
-import { useState } from 'react';
-import PencilComponent from './pencil';
-import React from 'react';
-// import pencil from "@/assets/icons/pencil.svg"
 
 interface IToolsprops {
   toolsList: Array<any>,
