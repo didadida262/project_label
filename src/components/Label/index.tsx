@@ -3,7 +3,7 @@
  * @Author: didadida262
  * @Date: 2024-03-14 00:32:06
  * @LastEditors: didadida262
- * @LastEditTime: 2024-07-31 18:16:41
+ * @LastEditTime: 2024-07-31 18:18:41
  */
 import { message } from 'antd';
 import paper from 'paper';
@@ -91,7 +91,7 @@ const LabelComponent = () => {
           </ButtonCommon>
         </div>
       </div>
-      <div className='h-full max-w-[calc(100%_-_320px)] flex-1 rounded-[4px] border-[1px] border-solid border-borderSecondColor '>
+      <div className='h-full max-w-[calc(100%_-_320px)] rounded-[4px] border-[1px] border-solid border-borderSecondColor '>
         <DrawComponent activeTool={activeTool} />
       </div>
       <div className='w-[200px] h-full rounded-[4px] border-[1px] border-solid border-borderSecondColor '>

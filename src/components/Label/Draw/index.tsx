@@ -3,7 +3,7 @@
  * @Author: didadida262
  * @Date: 2024-03-14 02:04:27
  * @LastEditors: didadida262
- * @LastEditTime: 2024-07-25 02:11:43
+ * @LastEditTime: 2024-07-31 18:22:31
  */
 import paper from 'paper';
 import React from 'react';
@@ -13,17 +13,15 @@ import { showPoint } from '@/utils/paperjsWeapon';
 
 import imgurl from '../../../assets/只狼.jpeg';
 
-import './index.scss';
-
-const DrawComponent = (props) => {
+const DrawComponent = (props:any) => {
   const { activeTool } = props;
   const canvasRef = useRef(null) as any;
   const initPoint = useRef(new paper.Point(0, 0));
 
-  const onMouseDown = (e) => {
+  const onMouseDown = (e:any) => {
     initPoint.current = e.point;
   };
-  const onMouseDrag = (e) => {
+  const onMouseDrag = (e:any) => {
     const delta = initPoint.current.subtract(e.point);
     const newCenter = paper.project.view.center.add(delta);
     const view: paper.View = paper.project.view;
@@ -51,7 +49,7 @@ const DrawComponent = (props) => {
   const drawPic = () => {
     const raster = new paper.Raster(imgurl);
     raster.onLoad = () => {
-      raster.fitBounds(paper.view.bounds, false);
+      raster.fitBounds(paper.view.bounds, true);
     };
   };
   useEffect(() => {
@@ -63,7 +61,7 @@ const DrawComponent = (props) => {
     setCursorPointer();
   }, [activeTool]);
   return (
-    <div className='draw'>
+    <div className='w-full h-full '>
       <canvas ref={canvasRef} className='w-full h-full' />
     </div>
   );
