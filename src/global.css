@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.markBorderG {
+    border: 1px solid green;
+  }
+  .markBorderR {
+    border: 1px solid red;
+  }
+  .markBorderO {
+    border: 1px solid orange;
+  }
